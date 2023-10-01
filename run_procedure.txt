@@ -1,0 +1,4 @@
+Running the Model:
+
+1. Run preprocess.py:
+python preprocess.py
