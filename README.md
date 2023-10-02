@@ -14,7 +14,15 @@ The ```Total_Power``` is believed to be the sum of all predicted ```Power```'s, 
 ## Queries
 1. Perform a statistical analysis on ```qW```. Query the following statstics for the variable as follows:
 ```
-Mean, Median, Mode, Min, Max
++-----------+-------+
+| statistic | value |
++-----------+-------+
+| mean      | 0.78  |
+| min       | 0.78  |
+| max       | 0.78  |
+| mode      | 0.79  |
+| median    | 0.78  |
++-----------+-------+
 ```
 2. If the ```Total_Power``` was deemed as the actual sum of all 49 ```Power``` variables, then on average, each ```Power_i``` would be ```2.04%``` of the entire ```Total_Power```. Now return a table of ```(id, Power, Percentage)``` where each ```(id, Power)``` instance is less than or equal to the ```2.04%``` threshold of the ```Total_Power```. Round off ```Percentage``` to two decimal place. Order by ```id``` first and then by ```Power```.
 
