@@ -44,7 +44,20 @@ The ```Total_Power``` is believed to be the sum of all predicted ```Power```'s, 
 
 4. It is also important to be skeptical with the dataset you get and not to believe that it is clean, null-free, and free of errors. Let us filter out data records that are *noisy*. Display only the results whose ```Total_Power``` value is *close* to the sum of all ```Power```'s in each configuration. By *close*, we can set a threshold to have an absolute difference of ```5```. So only show all configurations whose ```Total_Power``` is ```5``` off the sum of all ```Power```'s. Display results in any order.
 ```
-id, Diff
++------+-------------+
+| w_id | Difference  |
++------+-------------+
+|    1 |  -0.1484375 |
+|    2 |           0 |
+|    3 |  0.07421875 |
+|    4 |           0 |
+|   10 |  0.09765625 |
+|   12 |     -0.0625 |
+|   13 | -0.03515625 |
+|   14 |   0.1484375 |
+|   16 |      0.0625 |
+|   17 |    -0.09375 |
++------+-------------+
 ```
 
 5. Conduct an anomaly detection experiment. Report all anomalies in the dataset. Use the ```(WEC, anomaly)``` schema to report all anomalies found. Consider an anomaly to be a value whose last three (at least) values prior to it in the WEC variable and first three values (at least) after to it in the WEC variable to be all the same except for itself (note that the WEC are the ```X_i```'s and ```Y_i```'s) which has significant difference according to some threshold. For simplicity, assume that any type of difference is considered *anomalous*. For example, consider the configuration at 589 (e.g., 589th row). In the ```Y45```, the value is ```700``` and this is anomalous by this definition. The prior and posterior values (e.g., 586th to 588th, 590th to 592nd row instances) on the ```Y45``` have all ```800``` value. Return the anomly result data in any order.
