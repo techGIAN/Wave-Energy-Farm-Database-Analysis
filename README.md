@@ -24,11 +24,22 @@ The ```Total_Power``` is believed to be the sum of all predicted ```Power```'s, 
 | median    | 0.78  |
 +-----------+-------+
 ```
-2. If the ```Total_Power``` was deemed as the actual sum of all 49 ```Power``` variables, then on average, each ```Power_i``` would be ```2.04%``` of the entire ```Total_Power```. Now return a table of ```(id, Power, Percentage)``` where each ```(id, Power)``` instance is less than or equal to the ```2.04%``` threshold of the ```Total_Power```. Round off ```Percentage``` to two decimal place. Order by ```id``` first and then by ```Power```.
-
-3. Data preprocessing is an important step. We want to know how many of the configurations have duplicates. Unique pairs ```(X_i, Y_i)``` for ```i``` are not considered *duplicates* and should not be included in the output. The ```count``` here does not refer to the number of instances of each pair ```(X_i, Y_i)``` for ```i``` but rather the number of additional instances of such. Report the results in any order.
+2. Data preprocessing is an important step. We want to know how many of the configurations have duplicates. Unique pairs ```(X_i, Y_i)``` for ```i``` are not considered *duplicates* and should not be included in the output. The ```count``` here does not refer to the number of instances of each pair ```(X_i, Y_i)``` for ```i``` but rather the number of additional instances of such. Report the results in any order. Here are the first 10 results:
 ```
-i, X_i, Y_i, count
++------+------+
+| X    | Y    |
++------+------+
+|    1 |  400 |
+|  598 |  400 |
+|  198 |  400 |
+|  598 |  600 |
+|  198 |  200 |
+|  198 |  401 |
+|    1 |  300 |
+|  398 |  600 |
+|    1 |  601 |
+|  198 |  600 |
++------+------+
 ```
 
 4. It is also important to be skeptical with the dataset you get and not to believe that it is clean, null-free, and free of errors. Let us filter out data records that are *noisy*. Display only the results whose ```Total_Power``` value is *close* to the sum of all ```Power```'s in each configuration. By *close*, we can set a threshold to have an absolute difference of ```5```. So only show all configurations whose ```Total_Power``` is ```5``` off the sum of all ```Power```'s. Display results in any order.
