@@ -17,7 +17,7 @@ FROM (
         SELECT
             Y45_Table_T1.w_id,
             Y45_Table_T1.Y45,
-            Y45_Table_T1.Y45 - COALESCE(Y45_Table_T2.Y45, Y45_Table_T1.Y45) AS difference
+            ABS(Y45_Table_T1.Y45 - COALESCE(Y45_Table_T2.Y45, Y45_Table_T1.Y45)) AS difference
         FROM (
             SELECT Wave.w_id, Wave.Y45
             FROM Wave
@@ -35,6 +35,4 @@ WHERE OffsetTable.Lag1 = 0
     AND OffsetTable.Lag2 = 0
     AND OffsetTable.difference = OffsetTable.Lead1
     AND OffsetTable.Lead2 = 0
-    AND OffsetTable.Lead3 = 0
-
-;
+    AND OffsetTable.Lead3 = 0;
