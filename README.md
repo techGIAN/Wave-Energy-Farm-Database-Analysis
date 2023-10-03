@@ -60,8 +60,12 @@ The ```Total_Power``` is believed to be the sum of all predicted ```Power```'s, 
 +------+-------------+
 ```
 
-5. Conduct an anomaly detection experiment. Report all anomalies in the dataset. Use the ```(WEC, anomaly)``` schema to report all anomalies found. Consider an anomaly to be a value whose last three (at least) values prior to it in the WEC variable and first three values (at least) after to it in the WEC variable to be all the same except for itself (note that the WEC are the ```X_i```'s and ```Y_i```'s) which has significant difference according to some threshold. For simplicity, assume that any type of difference is considered *anomalous*. For example, consider the configuration at 589 (e.g., 589th row). In the ```Y45```, the value is ```700``` and this is anomalous by this definition. The prior and posterior values (e.g., 586th to 588th, 590th to 592nd row instances) on the ```Y45``` have all ```800``` value. Return the anomly result data in any order.
+5. Conduct an anomaly detection experiment. Report all anomalies in the specific ```Y45``` of the dataset.  Consider an anomaly to be a value whose last three (at least) values prior to it in the WEC variable and first three values (at least) after to it in the WEC variable to be all the same except for itself which has significant difference according to some threshold. For simplicity, assume that any type of difference is considered *anomalous*. For example, consider the configuration at 589 (e.g., 589th row). The value is ```700``` and this is anomalous by this definition. The prior and posterior values (e.g., 586th to 588th, 590th to 592nd row instances) on the ```Y45``` have all ```800``` value. Return the anomly result data in any order. This can be applied to any kind of column in the dataset.
 ```
-WEC, anomaly
++-----------+
+| anomalies |
++-----------+
+|       950 |
++-----------+
 ```
 
