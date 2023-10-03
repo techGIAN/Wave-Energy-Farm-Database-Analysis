@@ -52,6 +52,8 @@ source queries/q4.sql
 ```
 
 ## Queries
+Here are the queries we run to perform our analyses. I also display the first 10 rows of the result.
+
 1. Perform a statistical analysis on ```qW```. Query the following statstics for the variable as follows:
 ```
 +-----------+-------+
@@ -105,7 +107,16 @@ source queries/q4.sql
 +-----------+
 | anomalies |
 +-----------+
+|      1000 |
+|    945.84 |
+|     947.9 |
+|    938.98 |
 |       950 |
+|    938.79 |
+|    946.64 |
+|    947.49 |
+|    946.17 |
+|       800 |
 +-----------+
 ```
 
